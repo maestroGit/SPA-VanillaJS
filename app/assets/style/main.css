@@ -1,0 +1,30 @@
+/* Reset rules */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Global */
+  body {
+    font-family: "Merriweather Sans", sans-serif;
+    font-size:16px;
+    overflow: hidden;
+  }
+
+  /* Error ajax */
+  .error {
+    padding: 1rem;
+    font-size: 150%;
+    text-align: center;
+    color: #fff;
+    background-color: red;
+  }
+
+  .loader {
+    margin: 1rem auto;
+    display: block;
+    width:4rem;
+    height: 4rem;
+  }
+  
