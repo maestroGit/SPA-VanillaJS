@@ -12,6 +12,32 @@
     overflow: hidden;
   }
 
+  .form-search {
+    margin:auto;
+    text-align: center;
+  }
+
+  .form-search input {
+    display: block;
+    margin:auto;
+    padding:0.25rem;
+    border-radius: 0.25rem;
+    font-size:1rem;
+  }
+
+  .header {
+    padding:0.5rem;
+    position: sticky;
+    top:0;
+    text-align: center;
+    background-color: red;
+  }
+
+  /* > * selector en primer nivel de todos los hijos */
+  .header >* {
+    margin: 1rem auto;
+  }
+
   /* Error ajax */
   .error {
     padding: 1rem;
@@ -27,4 +53,5 @@
     width:4rem;
     height: 4rem;
   }
+
   

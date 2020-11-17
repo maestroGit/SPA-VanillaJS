@@ -1,8 +1,10 @@
 //al ser export default puedo renombralo como quiera, en este caso api
 import api from "./helpers/wp_api.js";
 import { ajax } from "./helpers/ajax.js";
-// Componente Title
-import { Title } from "./components/Title.js";
+// Componente Header
+import { Header } from "./components/Header.js";
+// Menu
+import { Menu } from "./components/Menu.js";
 // Componente loader
 import {Loader} from "./components/Loader.js";
 
@@ -18,7 +20,7 @@ export function App() {
   });
 // otra petición 
   ajax({
-    url: api.PoAGES,
+    url: api.PAGES,
     cbSuccess: (pag) => {
       console.log(pag);
     },
@@ -31,6 +33,7 @@ const d = document,
 $root = d.getElementById('root');
 
 // $root es la variable q hace referencia al nodo principal de la aplicación
-$root.appendChild(Title());
+$root.appendChild(Header());
 $root.appendChild(Loader());
+
 
