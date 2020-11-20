@@ -1,5 +1,6 @@
-import{App} from './App.js';
+import { App } from "./App.js";
 
-const d = document;
+// Detecta evento de cambio de hash ->location.hash
 
-d.addEventListener('DOMContentLoaded',App);
+document.addEventListener("DOMContentLoaded", App);
+window.addEventListener("hashchange", App);

@@ -38,6 +38,14 @@
     margin: 1rem auto;
   }
 
+  /* Dinamic content ajax */
+  /*Nos permitira ser resposive sin media queries*/
+  .grid-fluid {
+    margin: 1rem auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+  }
+
   /* Error ajax */
   .error {
     padding: 1rem;
@@ -45,6 +53,18 @@
     text-align: center;
     color: #fff;
     background-color: red;
+  }
+
+  .post-card {
+    margin: 1rem auto;
+    padding: 1rem;
+    width: 80%;
+    background-color: rgb(223, 219, 219);
+  }
+
+  .post-card p {
+    display: flex;
+    justify-content: space-between;
   }
 
   .loader {
