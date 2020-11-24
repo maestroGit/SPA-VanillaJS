@@ -3,8 +3,8 @@
 // Enpoints the location where the API sends a request and where the response emanates.
 
 //variables estaticas que exporto como un obj
-const NAME = "walkexperience",
-DOMAIN = `https://${NAME}.org`,
+const NAME = "css-tricks",
+DOMAIN = `https://${NAME}.com`,
 SITE = `${DOMAIN}/wp-json`,
 API_WP = `${SITE}/wp/v2`,
 POSTS = `${API_WP}/post?_embed`,

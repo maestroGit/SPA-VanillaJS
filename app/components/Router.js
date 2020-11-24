@@ -4,6 +4,7 @@ import { ajax } from "../helpers/ajax.js";
 import { PostCard } from "./PostCard.js";
 import { Post } from "./Post.js";
 
+
 export async function Router() {
   // Destructuración propiedad hash obj location
   let { hash } = location;
@@ -29,6 +30,20 @@ export async function Router() {
     // Dado q el search nos incorpora el parámetro de busqueda "#/search?query=valor" no comparamos === sino que aplicamos include()
   } else if (hash.includes("#/search")) {
     document.getElementById("posts").innerHTML = "<h2>Search Section</h2>";
+    let query = localStorage.getItem("wpSearch");
+    console.log(query)
+    if(!query){
+      return false // Salimos de las opciones de router
+    }
+    await ajax({
+      url:`${api.SEARCH}${query}`,
+      cbSuccess:(search)=> {
+        console.log(search);
+      }
+    });
+
+    
+
   } else if (hash === "#/contact") {
     document.getElementById("posts").innerHTML = "<h2>Contact Section</h2>";
   } else {
