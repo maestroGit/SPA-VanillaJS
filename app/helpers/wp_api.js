@@ -7,23 +7,27 @@ const NAME = "css-tricks",
 DOMAIN = `https://${NAME}.com`,
 SITE = `${DOMAIN}/wp-json`,
 API_WP = `${SITE}/wp/v2`,
-POSTS = `${API_WP}/post?_embed`,
+PER_PAGES = 16,
+POSTS = `${API_WP}/posts?_embed&per_page=${PER_PAGES}`,
 POST = `${API_WP}/posts`,
-SEARCH = `${API_WP}/search?_embed&search=`,
-CATEGORIES = `${API_WP}/categories`,
+SEARCH = `${API_WP}/search?_embed&per_page=${PER_PAGES}&search=`,
+CATEGORIES = `${API_WP}/categories`,//sin usar
 PAGES = `${API_WP}/pages`;
 
-// cuando la propiedad del obj y su valor cohinciden desde ECMAS6 se puede simplificar no es necesario name:NAME
+let page = 1;
+
+// cuando la propiedad del obj y su valor coinciden desde ECMAS6 se puede simplificar no es necesario name:NAME
 // Exportamos los difernetes obj
 export default {
     NAME,
     DOMAIN,
     SITE,
     API_WP,
-    POST,
+    PER_PAGES,
+    POSTS,
     POST,
     SEARCH,
     CATEGORIES,
-    PAGES
-}
+    page,
+};
 

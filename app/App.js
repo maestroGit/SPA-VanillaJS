@@ -7,6 +7,7 @@ import { Loader } from "./components/Loader.js";
 // Componente Post
 import { Posts } from "./components/Posts.js";
 import { Router } from "./components/Router.js";
+import { InfinitScroll } from "./helpers/infinit_scroll.js";
 export function App() {
   const $root = document.getElementById("root");
 
@@ -18,4 +19,5 @@ export function App() {
   $root.appendChild(Loader());
 
   Router();
+  InfinitScroll();
 }
