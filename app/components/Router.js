@@ -4,11 +4,12 @@ import { ajax } from "../helpers/ajax.js";
 import { PostCard } from "./PostCard.js";
 import { Post } from "./Post.js";
 import { SearchCard } from "./SearchCard.js";
+import { ContactForm } from "./ContactForm.js";
 
 export async function Router() {
   // Destructuración propiedad hash obj location
   let { hash } = location;
-  console.log(hash);
+  //console.log(hash);
   document.getElementById("posts").innerHTML = null;
   // Validaciones url -> hash
   if (!hash || hash === "#/") {
@@ -53,7 +54,10 @@ export async function Router() {
       },
     });
   } else if (hash === "#/contact") {
-    document.getElementById("posts").innerHTML = "<h2>Contact Section</h2>";
+    //document.getElementById("posts").innerHTML = "<h2>Contact Section</h2>";
+    // Agregamos el nodo ContactForm
+    document.getElementById("posts").appendChild(ContactForm());
+
   } else {
     document.getElementById("posts").innerHTML =
       "<h2>Post selected - Realizamos petición ajax</h2>";
